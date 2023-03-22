@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    :root{
+      --color-orange: hsl(25, 97%, 53%);
+      --color-light-grey: hsl(217, 12%, 63%);
+      --color-medium-grey: hsl(216, 12%, 54%);
+      --color-blue: hsl(213, 19%, 18%);
+      --color-dark-blue: hsl(216, 12%, 8%);
+    }
+    body{
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      font-size: 15px;
+      font-family: 'Overpass', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-dark-blue);
+      color: var(--color-light-grey);
+    }
+    .rating-panel{
+      border-radius: 1.5em;
+      width: 30%;
+      height: 40%;
+      padding: 2em;
+      background-color: var(--color-blue);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .star{
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--color-medium-grey);
+    }
+    .main-title{
+      color: white;
+    }
+    .main-form{
+      width: 100%;
+    }
+    .ratings{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    .rating{
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--color-medium-grey);
+    }
+    .hover:hover{
+      background-color: var(--color-light-grey);
+    }
+    .submit{
+      width: 100%;
+      margin-top: 2em;
+      padding: 1em;
+      border: none;
+      border-radius: 1.5em;
+      background-color: var(--color-orange);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 5px;
+      color: white;
+    }
+    .submit:hover{
+      background-color: white;
+      color: var(--color-orange);
+    }
+    .thank-panel{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <div class="rating-panel">
+    <button class="star hover"><img src="images/icon-star.svg" alt="Star Icon"></button>
+
+    <h1 class="main-title">How did we do?</h1>
+
+    <p class="main-description">
+      Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!
+    </p>
+
+    <form action="#" class="main-form">
+      <fieldset class="ratings">
+        <input type="button" name="one" id="one" class="rating hover" value="1">
+        <input type="button" name="two" id="two" class="rating hover" value="2">
+        <input type="button" name="three" id="three" class="rating hover" value="3">
+        <input type="button" name="four" id="four" class="rating hover" value="4">
+        <input type="button" name="five" id="five" class="rating hover" value="5">
+      </fieldset>
+
+      <button class="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <div class="thank-panel">
+    <p class="your-rating">You selected <!-- Add rating here --> out of 5</p>
+
+    <h1 class="thank-title">Thank you!</h1>
+
+    <p class="thank-description">
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </p>
+  </div>
+
+  <!-- Thank you state end -->
+
+</body>
+</html>
