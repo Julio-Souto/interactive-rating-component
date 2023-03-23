@@ -2,7 +2,6 @@ const ratings = document.querySelector(".ratings")
 const form = document.querySelector(".main-form")
 let currentRating = 0
 let previousButton = null
-document.querySelector(".thank-panel").classList.add("hide")
 
 ratings.addEventListener("click", (e) => {
   switch(e.target.value){
