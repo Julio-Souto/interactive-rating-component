@@ -7,17 +7,9 @@ document.querySelector(".thank-panel").classList.add("hide")
 ratings.addEventListener("click", (e) => {
   switch(e.target.value){
     case "1":
-      applyActive(e.target)
-      break;
     case "2":
-      applyActive(e.target)
-      break;
     case "3":
-      applyActive(e.target)
-      break;
     case "4":
-      applyActive(e.target)
-      break;
     case "5":
       applyActive(e.target)
       break;
