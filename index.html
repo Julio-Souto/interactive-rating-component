@@ -17,7 +17,8 @@
       --color-orange: hsl(25, 97%, 53%);
       --color-light-grey: hsl(217, 12%, 63%);
       --color-medium-grey: hsl(216, 12%, 54%);
-      --color-blue: hsl(213, 19%, 18%);
+      --color-blue: #1d242e;
+      --color-blue-button: #252e37;
       --color-dark-blue: hsl(216, 12%, 8%);
     }
     body{
@@ -34,7 +35,7 @@
     }
     .rating-panel{
       border-radius: 1.5em;
-      width: 30%;
+      width: 375px;
       height: 40%;
       padding: 2em;
       background-color: var(--color-blue);
@@ -44,14 +45,15 @@
       justify-content: space-between;
     }
     .star{
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       border: none;
       border-radius: 50%;
-      background-color: var(--color-medium-grey);
+      background-color: var(--color-blue-button);
     }
     .main-title{
       color: white;
+      margin-bottom: 0;
     }
     .main-form{
       width: 100%;
@@ -65,14 +67,21 @@
       padding: 0;
     }
     .rating{
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
+      font-weight: bold;
       border: none;
       border-radius: 50%;
-      background-color: var(--color-medium-grey);
+      background-color: var(--color-blue-button);
+      color: var(--color-light-grey);
     }
-    .hover:hover{
+    .rating:hover{
+      background-color: var(--color-orange);
+      color: white;
+    }
+    .active{
       background-color: var(--color-light-grey);
+      color: white;
     }
     .submit{
       width: 100%;
@@ -91,6 +100,33 @@
       color: var(--color-orange);
     }
     .thank-panel{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 1.5em;
+      width: 375px;
+      height: 40%;
+      padding: 2em;
+      background-color: var(--color-blue);
+      text-align: center;
+    }
+    .thank-image{
+      margin-top: .5em;
+    }
+    .rating-description{
+      margin-top: 1.5em;
+      color: var(--color-orange);
+      background-color: var(--color-blue-button);
+      border-radius: 2em;
+      padding: .5em 1em;
+      padding-top: .8em;
+    }
+    .thank-title{
+      color: white;
+      margin-bottom: 0;
+    }
+    .hide{
       display: none;
     }
   </style>
@@ -100,7 +136,7 @@
   <!-- Rating state start -->
 
   <div class="rating-panel">
-    <button class="star hover"><img src="images/icon-star.svg" alt="Star Icon"></button>
+    <button class="star"><img src="images/icon-star.svg" alt="Star Icon"></button>
 
     <h1 class="main-title">How did we do?</h1>
 
@@ -127,7 +163,9 @@
   <!-- Thank you state start -->
 
   <div class="thank-panel">
-    <p class="your-rating">You selected <!-- Add rating here --> out of 5</p>
+    <img src="images/illustration-thank-you.svg" alt="Thank You Image" class="thank-image">
+
+    <p class="rating-description">You selected <span class="your-rating"></span> out of 5</p>
 
     <h1 class="thank-title">Thank you!</h1>
 
@@ -138,6 +176,8 @@
   </div>
 
   <!-- Thank you state end -->
+  <script src="js/main.js">
 
+  </script>
 </body>
 </html>
